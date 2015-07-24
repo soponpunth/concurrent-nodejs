@@ -3,7 +3,7 @@ Simple class to perform multiple asynchronous tasks and return the whole pack of
 
 Example 
   when call a lot of function in waterfall structure will block each function inside which supposed to be run in concurrent
-  
+  ```
   someobj.function_call1(function(data1){
     someobj.function_call2(function(data2){
         someobj.function_call3(function(data3){
@@ -11,10 +11,10 @@ Example
       });
     });
   });
-  
+  ```
   see that function_call2 will be called after function_call1 is finished and so on...
   So how about...
-  
+  ```
   someobj.function_call1(function(data1){
 
   });
@@ -24,10 +24,10 @@ Example
   someobj.function_call3(function(data3){
   
   });
-  
+  ```
   Now asynchronous tasks are not blocking each other but how do we know which data is returned first?
   Therefore, here is the solution using Workpool
-  
+  ```
   var Workpool = require('./lib/workpool.js');
   var workpoolInstance = new Workpool(3, function(datalist){
     //do something with data1,data2,data3 here
@@ -43,5 +43,5 @@ Example
   someobj.function_call3(function(data3){
     workpoolInstance.done('data2',data3);
   });
-  
+  ```
   
