@@ -1,2 +1,2 @@
 # concurrent-nodejs
-Simple class to control concurrent model along with asynchronous nodejs 
+Simple class to perform multiple asynchronous tasks and return the whole pack of data after every function finished
