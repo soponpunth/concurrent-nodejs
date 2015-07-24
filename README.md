@@ -1,8 +1,8 @@
 # Multiple Asynchronous NodeJS
 Simple class to perform multiple asynchronous tasks and return the whole pack of data after every function finished
 . This usage will be useful when computing independent multiple asynchronous tasks such as fetch data from database.
-Example 
-  when call a lot of function in waterfall structure will block each function inside which supposed to be run in concurrent
+
+  When call a lot of function in waterfall structure will block each function inside which supposed to be run in concurrent
   ```
   someobj.function_call1(function(data1){
     someobj.function_call2(function(data2){
