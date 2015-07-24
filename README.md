@@ -1,4 +1,4 @@
-# concurrent-nodejs
+# Multiple Asynchronous NodeJS
 Simple class to perform multiple asynchronous tasks and return the whole pack of data after every function finished
 
 Example 
